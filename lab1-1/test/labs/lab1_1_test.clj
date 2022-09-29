@@ -1,6 +1,6 @@
-(ns lab1-1.lab1_1-test
+(ns labs.lab1_1-test
   (:require [clojure.test :refer [deftest is testing]],
-            [lab1-1.lab1-1 :refer [expand-word
+            [labs.lab1-1 :refer [expand-word
                                  generate-next-word
                                  generate-permutations
                                  ]]))
