@@ -64,10 +64,13 @@
 
 
 (defn generate-permutations [symbols n]
-  (if (not= n 0)
-    (my-loop (list (list)) symbols n)
+  (if (< n 0)
     ()
-    ))
+    (if (not= n 0)
+      (my-loop (list (list)) symbols n)
+      (list (list))
+      ))
+  )
 
 (defn -main
   []

@@ -42,4 +42,14 @@
           (generate-permutations `(:b :a) 3)
           [[:b, :a, :b], [:a, :b, :a]]
           )))
+  (testing "len = 0"
+    (is (=
+          (generate-permutations `("b" "a") 0)
+          [[]]
+          )))
+  (testing "len less than 0"
+    (is (=
+          (generate-permutations `("b" "a") -1)
+          []
+          )))
   )

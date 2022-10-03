@@ -35,16 +35,21 @@
     words
     (my-loop (generate-next-word words alphabet) alphabet (dec n))))
 
-
 (defn generate-permutations [symbols n]
-  (if (not= n 0)
-    (my-loop (list (list)) symbols n)
+  (if (< n 0)
     ()
-    ))
+    (if (not= n 0)
+      (my-loop (list (list)) symbols n)
+      (list (list))
+      ))
+    )
 
 (defn -main
   []
+  (println (generate-permutations (list "b" "a" "g") -3))
+  (println (generate-permutations (list "b" "a" "g") 0))
   (println (generate-permutations (list "b" "a" "g") 3))
+  (println (generate-permutations (list "b" "a" "g") 1))
   (println (generate-permutations (list :a :b :g) 3))
   (println (generate-permutations (list '("b") '("a") '("g")) 3))
   )

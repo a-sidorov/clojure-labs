@@ -29,6 +29,16 @@
           [["d", "b"], ["a", "b"], ["d", "c"], ["a", "c"]]
           ))
     )
+  (testing "len = 0"
+    (is (=
+          (generate-permutations `("b" "a") 0)
+          [[]]
+          )))
+  (testing "len less than 0"
+    (is (=
+          (generate-permutations `("b" "a") -1)
+          []
+          )))
   )
 
 (deftest generate-permutations-test
