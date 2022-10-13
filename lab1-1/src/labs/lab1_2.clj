@@ -50,24 +50,11 @@
    )
   )
 
-;(defn my-loop [words alphabet n]
-;  "цикл"
-;  (if (= n 0)
-;    words
-;    (my-loop (generate-next-word words alphabet) alphabet (dec n))))
-
-(defn my-loop [words alphabet n]
-  "цикл"
-  (if (= n 1)
-    (generate-next-word words alphabet)
-    (recur (generate-next-word words alphabet) alphabet (dec n))))
-
-
 (defn generate-permutations [symbols n]
   (if (< n 0)
     ()
     (if (not= n 0)
-      (my-loop (list (list)) symbols n)
+      (nth (iterate (fn [acc] (generate-next-word acc symbols)) (list (list))) n)
       (list (list))
       ))
   )
