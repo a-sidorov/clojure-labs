@@ -8,7 +8,9 @@
 
 (defn -main [& args]
   (println (my-map inc [1 2 3 4 5]))
+  (println (my-map inc (list 1 2 3 4 5)))
   (println (my-map dec [1 2 3 4 5]))
+  (println (my-map dec (list 1 2 3 4 5)))
   (println (my-filter even? (range 10)))
   (println (my-filter (fn [x] (>= x 7)) (range 10)))
   )
