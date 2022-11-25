@@ -3,7 +3,7 @@
 
 (defn trapezoid-area
   [a b h]
-  (* 0.5 h (+ a b)))
+  (* (/ 1 2) h (+ a b)))
 
 
 (defn integrate-not-optimized
